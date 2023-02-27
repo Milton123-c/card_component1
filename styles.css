@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --neutral-primero : hsl(217, 54%, 11%);
+--neutral-segundo:  hsl(216, 50%, 16%);
+--neutral-tercero:  hsl(215, 32%, 27%);
+--neutral-cuarto:  hsl(0, 0%, 100%);
+}
+
+:root{
+    --primary-uno: hsl(215, 51%, 70%);
+--primary-dos: hsl(178, 100%, 50%);
+}
+
+.p__color-dos{
+    color: var(--primary-dos);
+}
+
+:root{
+    --paragraph: 18px;
+    --font-family : 'Outfit', sans-serif;  
+}
+
+.container{
+    background-color: var(--neutral-primero);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    background-color: var(--neutral-segundo);
+    overflow: hidden;
+    max-width: 350px;
+    padding: 1.5rem;
+    border-top-right-radius: 0.8rem;
+    border-top-left-radius: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    box-shadow: 0px 18px 3px 10px rgba(0,0,0,0.19);
+-webkit-box-shadow: 0px 18px 3px 10px rgba(0,0,0,0.19);
+-moz-box-shadow: 0px 18px 3px 10px rgba(0,0,0,0.19);
+
+
+}
+
+.activity__view{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 270px;
+    height: 302px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsla(178, 100%, 50%, 0.445);
+    transform: translateY(270px);
+    transition: transform 0.5s ease-in-out;
+}
+
+.card__header-image:hover + .activity__view{
+    transform: translateY(0);
+}
+
+
+#hover__title{
+    color: var(--neutral-cuarto);
+    cursor: pointer;
+    transition: color 0.4s ease-in-out;
+}
+#hover__title:hover{
+    color: var(--primary-dos);
+    
+}
+
+
+
+.card__header{
+    overflow: hidden;
+    max-width: calc(350px - 3rem);
+    border-radius: 0.8rem;
+    position: relative;
+}
+
+.card__header-image{
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+.card__body{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card__body > h2{
+    color: var(--neutral-cuarto);
+}
+
+.paragraph{
+    color: var(--primary-uno);
+    letter-spacing: 1px;
+    line-height: 1.5rem;
+}
+
+.ff__Outfit-300{
+    font-family: var(--font-family);
+    font-weight: 300;
+}
+
+.ff__Outfit-400{
+
+    font-family: var(--font-family);
+    font-weight: 400;
+}
+.ff__Outfit-600{
+    font-family: var(--font-family);
+    font-weight: 600;
+}
+
+.card__date{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 1rem 0;
+    border-bottom: 1px hsla(215, 52%, 70%, 0.301) solid;
+}
+
+.card__date p:nth-child(1){
+    color: var(--primary-dos);
+}
+
+.card__date p:nth-child(2){
+    color: var(--primary-uno);
+}
+
+.card__footer{
+    display: flex;
+    align-items: center;
+
+}
+
+.card__footer > article{
+    overflow: hidden;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    border: 1px solid white;
+}
+.card__footer > article img{
+    display: block;
+    width: 100%;
+    
+}
+
+.card__footer p{
+    color: var(--primary-uno);
+    padding-left: 1rem;
+}
+
+.card__footer > p span{
+    color: var(--neutral-cuarto);
+   
+}
+
+.d__flex-center{
+    display: flex;
+    align-items: center;
+}
+
+.p_1{
+    padding-left: 5px;
+}
+
+.hover__footer-avatar{
+    cursor: pointer;
+    color: var(--neutral-cuarto);
+    transition: color 0.4s ease-in-out;
+    
+}
+
+.hover__footer-avatar:hover{
+
+    color: var(--primary-dos);
+    
+}
+
+
+
+@media (max-width: 1440px){
+    .card{
+        width: 300px;
+        border-bottom-left-radius: 0.8rem;
+        border-bottom-right-radius: 0.8rem;
+        padding: 1rem;
+    }
+
+  
+    .card__header-image{
+        width: 100%;
+        height: 100%;
+    }
+
+    .card__body > h2{
+        font-size: 17px;
+    }
+    .card__body > p{
+        font-size: 14px;
+    }
+    .font__size-text{
+        font-size: 14px;
+    }
+
+    .card__footer > article{
+        width: 35px;
+        height: 35px;
+    }
+}
