@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+/* colors primary  */
+:root{
+    --Orange :hsl(25, 97%, 53%); 
+}
+
+/* backgrounds neutral  */
+
+:root{
+    --colorWhite : hsl(0, 0%, 100%);
+    --LightGrey: hsl(217, 12%, 63%);
+--MediumGrey: hsl(216, 12%, 54%);
+--DarkBlue: hsl(213, 19%, 18%);
+--VeryDarkBlue: hsl(216, 12%, 8%);
+}
+
+/* typography */
+
+:root{
+    --fontSize : 15px;
+    --overpass : 'Overpass', sans-serif;
+}
+
+body{
+
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--VeryDarkBlue);
+}
+
+.ff__overpass-400{
+    font-family: var(--overpass);
+    font-weight: 400;
+}
+.ff__overpass-700{
+    font-family: var(--overpass);
+    font-weight: 700;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    width: 350px;
+    min-height: 200px;
+    background-color: var(--DarkBlue);
+    border-radius: 1.5rem;
+}
+
+.card__icon-start{
+    background-color: hsl(220, 6%, 20%);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+.card > h2{
+    color: var(--colorWhite);
+}
+.card > p{
+    color: var(--LightGrey);
+}
+
+a{
+    text-decoration: none;
+    color: var(--MediumGrey);
+    width: 40px;
+    height: 40px;
+    background-color: hsl(180, 1%, 21%);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.card > button{
+    color: var(--colorWhite);
+    background-color: var(--Orange);
+    padding: 1rem;
+    border-radius: 2.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.623);
+
+    text-transform: uppercase;
+    margin-bottom: 1🖕 ;
+}
+
+.card__bottom-start{
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.collapse{
+    display: flex;
+}
+
+/* card of thank */
+
+#card__thanks-collapse{
+    display: none;
+}
+
+.card__image-thank{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+
+}
+
+.card__info{
+    width: max-content;
+    background-color: hsl(212, 16%, 16%);
+    border: 1px solid hsla(215, 17%, 19%, 0.644);
+    padding: 1rem;
+    border-radius: 1.5rem;
+
+}
+
+.card__info > p{
+    color: var(--Orange);
+}
+
+.card_center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card__paragraph{
+    color: var(--LightGrey);
+    text-align: center;
+    line-height: 1.5rem;
+}
